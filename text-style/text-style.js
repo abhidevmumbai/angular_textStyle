@@ -10,7 +10,7 @@
                 selected: false
             },
             {
-                text: 'Underlined',
+                text: 'Underline',
                 selected: false
             }
         ];
