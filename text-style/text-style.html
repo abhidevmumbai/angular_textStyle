@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="opt in $ctrl.styles">
+        <label>
+            <input type="checkbox" ng-model="opt.selected" ng-change="$ctrl.onUpdate(opt.text)"/> {{opt.text}}
+        </label>
+    </li>
+</ul>

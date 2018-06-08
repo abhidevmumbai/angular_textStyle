@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="textEditor">
+<head>
+	<title>Text Editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./text-style/text-style.js"></script>
+</head>
+
+<body>
+    <div ng-controller="editorController as editor">
+    	<text-style select-limit="editor.limit" on-style-update="editor.onStyleUpdate(styles)"></text-style>
+    	<div id="editor" contentEditable="true">
+    		{{editor.editorText}}
+    	</div>
+    	<!-- {{editor.selectedStyle}} -->
+    </div>
+</body>
+
+</html>
