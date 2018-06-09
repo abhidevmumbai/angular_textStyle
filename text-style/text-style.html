@@ -1,6 +1,6 @@
-<ul>
-    <li ng-repeat="opt in $ctrl.styles">
-        <label>
+<ul class="controls">
+    <li ng-repeat="opt in $ctrl.styles" ng-class="{selected: opt.selected}">
+        <label class="{{opt.text}}">
             <input type="checkbox" ng-model="opt.selected" ng-change="$ctrl.onUpdate(opt.text)"/> {{opt.text}}
         </label>
     </li>

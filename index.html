@@ -3,17 +3,18 @@
 <head>
 	<title>Text Editor</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <script src="./main.js"></script>
     <script src="./text-style/text-style.js"></script>
 </head>
 
 <body>
     <div ng-controller="editorController as editor">
-    	<text-style select-limit="editor.limit" on-style-update="editor.onStyleUpdate(styles)"></text-style>
-    	<div id="editor" contentEditable="true">
+    	<text-style class="db" select-limit="editor.limit" on-style-update="editor.onStyleUpdate(styles)"></text-style>
+    	<div class="editor" contentEditable="true">
     		{{editor.editorText}}
     	</div>
-    	<!-- {{editor.selectedStyle}} -->
+    	{{editor.selectedStyle}}
     </div>
 </body>
 

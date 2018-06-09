@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+html,
+body {
+    font-size: 14px;
+}
+.db { display: block; }
+.dn { display: none; }
+
+.editor {
+    border: 1px solid #ddd;
+    height: 200px;
+    width: 60%;
+    margin: 15px;
+}
+
+.controls {
+	background: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px;
+    overflow: hidden;
+}
+
+.controls li {
+	border-right: 1px solid #ddd;
+    display: inline-block;
+}
+.controls li:last-child {
+	border: none;
+}
+.controls li label {
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 10px;
+	position: relative;
+}
+.controls li label.Bold {
+	font-weight: bold;
+}
+.controls li label.Italic {
+	font-style: italic;
+}
+.controls li label.Underline {
+	text-decoration: underline;;
+}
+
+.controls li input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+
+.controls li.selected, .controls li:hover {
+    box-shadow: inset 0px 0px 10px #ddd;
+}
