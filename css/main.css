@@ -13,9 +13,11 @@ body {
 
 .editor {
     border: 1px solid #ddd;
+    font-size: 15px;
     height: 200px;
-    width: 60%;
     margin: 15px;
+    outline: none;
+    padding: 10px;
 }
 
 .controls {

@@ -10,7 +10,7 @@
 
 <body>
     <div ng-controller="editorController as editor">
-    	<text-style class="db" select-limit="editor.limit" on-style-update="editor.onStyleUpdate(styles)"></text-style>
+    	<text-style class="db" input="editor.selectedStyle" select-limit="editor.selectLimit" on-style-update="editor.onStyleUpdate(styles)"></text-style>
     	<div class="editor" contentEditable="true">
     		{{editor.editorText}}
     	</div>
