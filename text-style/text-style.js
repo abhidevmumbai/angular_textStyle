@@ -35,7 +35,28 @@
                 el.selected === true ? $ctrl.selectedStyle.push(el.text) : false;
             });
             // call the callback method from the binding
-            $ctrl.onStyleUpdate({ styles: $ctrl.styles });
+            // $ctrl.onStyleUpdate({ styles: $ctrl.styles });
+            $ctrl.executeStyleUpdates();
+        }
+
+        // Method to update styles in the content area
+        $ctrl.executeStyleUpdates = function() {
+            $ctrl.styles.map((el) => {
+                // Check if the text is already formatted along with the selected option
+                if (el.selected) {
+                    if(!document.queryCommandState(el.text)) {
+                        document.execCommand(el.text, false, '');
+                    } else {
+                        return;
+                    }
+                } else {
+                    if(document.queryCommandState(el.text)) {
+                        document.execCommand(el.text, false, '');
+                    } else {
+                        return;
+                    }
+                }
+            });
         }
     }
 
